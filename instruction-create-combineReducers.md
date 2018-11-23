@@ -1,11 +1,14 @@
 In this instruction, we will create the multiple state for the app.
 To use multipe state, we need to use `combineReducers` from `redux`. 
 There for we need to import the modules as the following from the redux:
+
 `
 import {createStore, combineReducers} from 'redux';
 `
+
 Then we need to create the reducer for each of the state that we will 
 store in the redux. In this exercise, we will create two reducers:
+
 `
 // Expenses Reducer
 
@@ -20,6 +23,7 @@ const expensesReducer = ( state = expensesReducerDefaultState, action) => {
     }
 };
 `
+
 Then this is the filter reducer
 
 `
