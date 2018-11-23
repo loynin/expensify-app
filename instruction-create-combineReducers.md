@@ -1,6 +1,9 @@
-In this instruction, we will create the multiple state for the app.
-To use multipe state, we need to use `combineReducers` from `redux`. 
-There for we need to import the modules as the following from the redux:
+## Using createStore and combineReducers
+
+
+In this instruction, we will create the multiple states for the app.
+To use multipe states, we need to use `combineReducers` from `redux`. 
+Therefore, we need to import the modules as the following from the redux:
 
 ```
 import {createStore, combineReducers} from 'redux';
@@ -56,13 +59,15 @@ const store = createStore(combineReducers({
 );
 ```
 
-Here we display the states of the operation:
+Here we display the result states of the operation:
 
 ```
 console.log(store.getState());
 ```
 
-Here is the final code: 
+### Here is the final code: 
+
+Copy this code and run it as a javascript file:
 
 ```
 import {createStore, combineReducers} from 'redux';
