@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server public/",
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "server": "live-server public/",
     "dev-server": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "add": "^2.0.6",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -19,9 +21,14 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.1",
+    "dev-server": "0.0.2",
+    "express": "^4.16.4",
+    "moment": "^2.22.2",
     "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
     "react": "^16.6.3",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-dates": "^18.2.2",
     "react-dom": "^16.6.3",
     "react-modal": "^3.6.1",
     "react-redux": "^5.1.1",
@@ -36,7 +43,9 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "cross-env": "^5.2.0",
     "live-server": "^1.2.0",
+    "mini-css-extract-plugin": "^0.4.5",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2"
   }
