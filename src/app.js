@@ -8,19 +8,19 @@ import {setTextFilter} from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css'
 import './styles/styles.scss';
+//import './firebase/firebase';
 
 const store = configureStore();
 
 store.subscribe (() => {
     const state = store.getState();
     const expenses = getVisibleExpenses(state.expenses, state.filters);
-
     console.log(expenses);
 })
 
-store.dispatch(addExpense({description: 'Water bill', amount: 4500, createdAt: 1542313000000}));
-store.dispatch(addExpense({description: 'Gas bill', amount: 50, createdAt: 1542314000000}));
-store.dispatch(addExpense({description: 'Rent bill', amount: 1095, createdAt: 1542312000000}));
+// store.dispatch(addExpense({description: 'Water bill', amount: 4500, createdAt: 1542313000000}));
+// store.dispatch(addExpense({description: 'Gas bill', amount: 50, createdAt: 1542314000000}));
+// store.dispatch(addExpense({description: 'Rent bill', amount: 1095, createdAt: 1542312000000}));
 
 //store.dispatch(setTextFilter('bill'));
 //store.dispatch(setTextFilter('water'));
