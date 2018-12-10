@@ -9,6 +9,7 @@ import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css'
 import './styles/styles.scss';
 import { firebase } from './firebase/firebase';
+import LoadingPage from './components/LoadingPage';
 
 const store = configureStore();
 
@@ -17,13 +18,6 @@ store.subscribe (() => {
     const expenses = getVisibleExpenses(state.expenses, state.filters);
     console.log(expenses);
 })
-
-// store.dispatch(addExpense({description: 'Water bill', amount: 4500, createdAt: 1542313000000}));
-// store.dispatch(addExpense({description: 'Gas bill', amount: 50, createdAt: 1542314000000}));
-// store.dispatch(addExpense({description: 'Rent bill', amount: 1095, createdAt: 1542312000000}));
-
-//store.dispatch(setTextFilter('bill'));
-//store.dispatch(setTextFilter('water'));
 
 const jsx = (
     <Provider store = {store}>
@@ -42,7 +36,7 @@ const renderApp = () => {
 };
 
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
